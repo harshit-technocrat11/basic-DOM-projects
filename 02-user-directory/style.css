@@ -45,6 +45,10 @@ body {
   flex-direction: column;
   gap: 16px;
   padding: 0;
+
+  height: 50vh;
+
+  overflow-y: auto;
 }
 
 /* --- Individual User Card Styles --- */
@@ -95,4 +99,9 @@ body {
   margin: 0;
   color: #555;
   font-weight: bold; /* Make user name bold */
+}
+
+.container > p{
+    background-color: rgb(188, 188, 195);
+    border-radius: 5px;
 }
