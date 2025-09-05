@@ -1,11 +1,14 @@
-
+const body = document.body;
+//random
 const randomColorBtn = document.querySelector("#randomBtn");
 
+//apply input color
 const applyBtn = document.querySelector("#applyBtn");
 
+// color input 
 const ColorInput = document.querySelector("#color");
 
-const body = document.body;
+const currentColorVal = document.querySelector(".currentColorValue");
 
 const colorList = ['#FF5733', // A vibrant reddish-orange
     '#33FF57', // A bright lime green
@@ -21,12 +24,33 @@ const colorList = ['#FF5733', // A vibrant reddish-orange
     '#9B59B6'  // Amethyst purple
 ]
 
-//adding events
+//functions
+function applyRandomColor(){
 
-applyBtn.addEventListener("click", function(e) {
-
-    let randomIndex = Math.floor(Math.random()*10) ;
+    let randomIndex = Math.floor(Math.random()*colorList.length) ;
     let color = colorList[randomIndex]
     body.style.backgroundColor = color;
+
+    //updating current value
+    currentColorVal.textContent = color;
     
-} )
+}
+
+function applyInputColor() {
+    //base conditions- 
+    const color = ColorInput.value
+    console.log(ColorInput.value)
+    body.style.backgroundColor = color;
+
+    //updating current value
+    currentColorVal.textContent = color;
+
+}
+
+
+//event listners
+randomColorBtn.addEventListener("click", applyRandomColor );
+
+//apply color
+applyBtn.addEventListener("click" , applyInputColor)
+

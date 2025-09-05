@@ -3,8 +3,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-    /* background-color: #fff; */
-    
+    background-color: rgb(201, 91, 201);
 
 }
 
@@ -30,6 +29,8 @@ body {
     /* padding-top: 10px;
      */
     
+     padding: 10px;
+     border-radius: 10px;
 
 }
 
