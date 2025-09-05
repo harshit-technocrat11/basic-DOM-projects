@@ -101,12 +101,29 @@ body {
   font-weight: bold; /* Make user name bold */
 }
 
-.container > p{
-    background-color: rgb(188, 188, 195);
-    border-radius: 5px;
+.container > p {
+  background-color: rgb(188, 188, 195);
+  border-radius: 5px;
 }
 
-a{
-    text-decoration: none;
-    
+a {
+  text-decoration: none;
+}
+
+.home-link {
+  display: inline-block;
+  margin: 20px 0 0 20px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: background 0.2s, color 0.2s;
+}
+
+.home-link:hover {
+  background: #e0e7ff;
+  color: #333;
 }
