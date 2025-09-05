@@ -28,9 +28,7 @@ const colorList = ['#FF5733', // A vibrant reddish-orange
 //functions
 const colorValid = (color) =>{
     const temp = new Option().style;
-
     temp.color = color;
-
     return temp.color !== "";
 
 }

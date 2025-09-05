@@ -1,0 +1,98 @@
+/* --- General Layout & Boilerplate --- */
+body {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+}
+
+/* --- Main App Container --- */
+.container {
+  border: none;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90vw;
+  margin: 50px auto 0 auto;
+  padding: 32px 24px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* --- Search Input Field --- */
+#searchInput {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+#searchInput:focus {
+  border-color: #7c3aed;
+}
+
+/* --- Container for All User Cards --- */
+.user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+
+/* --- Individual User Card Styles --- */
+.userItem {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Use gap for spacing between image and text */
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.userItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.12);
+}
+
+/* --- User Avatar Image --- */
+.userItem img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0; /* Subtle border for definition */
+}
+
+/* --- Text Details Container --- */
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4px; /* Use gap for clean spacing between h3 and p */
+}
+
+/* --- User Name --- */
+.userDetails h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #7c3aed;
+  font-weight: 600; /* Bolder for emphasis */
+}
+
+/* --- User Email --- */
+.userDetails p {
+  margin: 0;
+  color: #555;
+  font-weight: bold; /* Make user name bold */
+}
