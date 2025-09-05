@@ -105,3 +105,8 @@ body {
     background-color: rgb(188, 188, 195);
     border-radius: 5px;
 }
+
+a{
+    text-decoration: none;
+    
+}

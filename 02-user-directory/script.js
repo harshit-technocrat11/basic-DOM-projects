@@ -13,7 +13,7 @@ function renderUsers(users_objs){
         console.log(user)
         console.log(user.profileURL)
         return `
-
+        <a href="userProfile.html" >
         <div class="userItem">
           <img src="${user.profileURL}" alt="error loading image" />
 
@@ -22,7 +22,7 @@ function renderUsers(users_objs){
             <span>${user.email}</span>
           </div>
         </div>
-      
+      </a>
         `;
     })
 
