@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+        <h1 class="heading">Color-Theme Changer</h1>
     
-</body>
+        <div class="inputBtnContainer">
+          <button id="randomBtn">Random Color</button>
+          <input
+          id = "color"
+            type="text"
+            placeholder="Enter a color or hex (e.g white or #ffffff)"
+          />
+    
+          <button id="applyBtn">Apply Color</button>
+    
+        </div>
+        <p class="currentColor">
+          Current Color:
+          <span class="currentColorValue">white</span>
+        </p>
+    </div>
+
+
+    <script src="./script.js"></script>
+  </body>
 </html>
