@@ -13,6 +13,7 @@ function renderUsers(users_objs){
         console.log(user)
         console.log(user.profileURL)
         return `
+
         <div class="userItem">
           <img src="${user.profileURL}" alt="error loading image" />
 
@@ -49,6 +50,12 @@ searchInput.addEventListener('input' , (e) =>{
 
 })
 
+//user profile
+
+
 //normal - render users - if search - empty
 renderUsers(users);
+
+
+
 
