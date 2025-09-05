@@ -11,6 +11,7 @@ const ColorInput = document.querySelector("#color");
 const currentColorVal = document.querySelector(".currentColorValue");
 
 const colorList = ['#FF5733', // A vibrant reddish-orange
+    'black',
     '#33FF57', // A bright lime green
     '#3357FF', // A strong blue
     '#FFC300', // A vivid yellow-orange
@@ -25,18 +26,19 @@ const colorList = ['#FF5733', // A vibrant reddish-orange
 ]
 
 //functions
-function applyRandomColor(){
+const handleRandomBtn = () =>{
 
     let randomIndex = Math.floor(Math.random()*colorList.length) ;
     let color = colorList[randomIndex]
     body.style.backgroundColor = color;
+    console.log(color)
 
     //updating current value
     currentColorVal.textContent = color;
     
 }
 
-function applyInputColor() {
+const handleApplyColor = () =>  {
     //base conditions- 
     const color = ColorInput.value
     console.log(ColorInput.value)
@@ -49,8 +51,8 @@ function applyInputColor() {
 
 
 //event listners
-randomColorBtn.addEventListener("click", applyRandomColor );
+randomColorBtn.addEventListener("click", handleRandomBtn);
 
 //apply color
-applyBtn.addEventListener("click" , applyInputColor)
+applyBtn.addEventListener("click", handleApplyColor);
 

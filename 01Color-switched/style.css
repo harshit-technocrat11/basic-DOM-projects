@@ -84,7 +84,12 @@ input[type="text"] {
 }
 
 .currentColor {
-  padding: 20px;
+  padding: 10px;
+  color: black;
+  background-color: rgb(88, 213, 39);
+
+  border-radius: 5px;
+
 }
 
 
