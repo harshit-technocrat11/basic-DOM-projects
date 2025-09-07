@@ -1,0 +1,71 @@
+/* --- General Layout & Boilerplate --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f6f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Profile Card Styles --- */
+.profile-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+  text-align: center;
+  max-width: 400px;
+  width: 90vw;
+}
+
+/* --- User Avatar Image --- */
+#user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #7c3aed;
+  margin-bottom: 20px;
+}
+
+/* --- User Name --- */
+#user-name {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* --- User Email --- */
+#user-email {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* --- "Back to Directory" Link --- */
+.back-link, .home-link {
+    display: inline-block;
+    margin: 20px 12px 0 0; /* Add right margin for spacing */
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.2s;
+}
+
+.back-link:hover, .home-link:hover {
+    background: #e0e7ff;
+}
+
+/* --- Button Container for Top Left Position --- */
+.button-links-container {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+}

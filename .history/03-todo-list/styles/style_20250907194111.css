@@ -1,0 +1,54 @@
+
+body{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 60vh;
+    width: 100vw;
+
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px
+}
+
+.root-container{
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid black;
+    height: 60vh;
+    
+    gap: 10px;
+    width: 400px;
+    
+
+}
+
+/* todo container */
+.display-todos{
+    /* display: flex;
+    flex-direction: row;
+     */
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.todo{
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+
+
+}
+
+/* buttons */
+#add-todo{
+    border-radius: ;
+    padding: 10px;
+}
+
