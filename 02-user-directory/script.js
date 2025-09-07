@@ -30,11 +30,7 @@ function renderUsers(users_objs) {
 
   console.log(userItems);
 
-  
-
 }
-
-
 
 //for filtered display -searchedUsers
 searchInput.addEventListener("input", (e) => {
