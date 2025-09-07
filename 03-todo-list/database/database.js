@@ -1,4 +1,4 @@
-const todos_list = [
+let todos_list = [
     {
         task: "go to the gym"
     },
@@ -15,3 +15,10 @@ const todos_list = [
         task:"go to market building - unit 1 , left lane, main building- buy some hotwheels"
     },
 ]
+
+todos_list = todos_list.map(task=>({
+    ...task,
+    id: Math.floor(Math.random()*100) + 1
+}))
+
+console.log(todos_list)
