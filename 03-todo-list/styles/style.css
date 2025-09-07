@@ -40,14 +40,11 @@ body {
 .search-add {
   width: 100%;
   margin-bottom: 8px;
-}
-
-.search-add form {
-  display: flex;
+  display: flex; /* Changed from form to flex container */
   gap: 10px;
-  width: 100%;
 }
 
+/* --- Input Field --- */
 #user-input {
   flex: 1;
   padding: 12px 14px;
@@ -55,13 +52,15 @@ body {
   border: 1px solid #e0e7ff;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s;
-  background: #f3f4f6;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(124, 58, 237, 0.05);
+  transition: border-color 0.2s, background 0.2s;
 }
 
 #user-input:focus {
   border-color: #7c3aed;
-  background: #fff;
+  background: #f3f4f6;
 }
 
 /* --- Add Button --- */
@@ -76,6 +75,10 @@ body {
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #add-todo:hover {
@@ -102,23 +105,28 @@ body {
   box-shadow: 0 2px 8px rgba(60, 60, 120, 0.07);
   transition: box-shadow 0.2s, transform 0.2s;
   border: none;
+  overflow: hidden; /* Prevents content overflow */
 }
 
-.todo:hover {
-  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.1);
-  transform: translateY(-2px) scale(1.01);
-}
-
-.todo h4 {
+/* --- Todo Text --- */
+.todo-text {
+  flex: 1;
   margin: 0;
   font-size: 1.08rem;
   color: #333;
   font-weight: 500;
   letter-spacing: 0.5px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides overflowed text */
+  text-overflow: ellipsis; /* Adds ... at the end */
+
+  text-align: left;
 }
 
 /* --- Delete Button --- */
 #delete-todo {
+  margin-left: 12px;
+  flex-shrink: 0;
   background: none;
   border: none;
   cursor: pointer;
@@ -135,14 +143,19 @@ body {
   background: #fee2e2;
 }
 
+.display-todos {
+  height: 55vh;
+  overflow-y: auto;
+}
+
 /* --- Responsive --- */
 @media (max-width: 600px) {
   .root-container {
     max-width: 98vw;
     padding: 18px 8px;
   }
-  .search-add form {
-    flex-direction: column;
+  .search-add {
+    flex-direction: column; /* Responsive for flex container */
     gap: 8px;
   }
 }
