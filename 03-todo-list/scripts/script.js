@@ -3,11 +3,27 @@ let todos_list = [
     //   task: "hey go to the gym",
     //   id: 879
     // }
+] = loadFromLocalStorage();
 
-]
-// console.log(todos_list);
+
+//storing to local storage  --- to remove the effect of refresh page
+
+function saveToLocalStorage(todos) {
+  localStorage.setItem("todos", JSON.stringify(todos))
+}
+
+
+//loading from localstorage - after refresh 
+function loadFromLocalStorage(){
+  const storedTodos = localStorage.getItem("todos");
+
+  // If there's data, parse it back to an array; otherwise, return an empty array
+
+  return storedTodos ? JSON.parse(storedTodos) : [];
+}
 
 let todoContainer = document.querySelector(".display-todos");
+
 
 //userinput
 let userInput = document.getElementById("user-input");
@@ -49,6 +65,8 @@ function handleCreateTodo() {
   renderTodos(todos_list)
   userInput.value =""
   console.log(userInput)
+
+  saveToLocalStorage(todos_list)
   
 }
 
@@ -81,6 +99,8 @@ function renderTodos(todos_list) {
 
     //append to todo container
     todoContainer.appendChild(todoElem);
+
+    saveToLocalStorage(todos_list)
     
   });
 }
@@ -98,6 +118,7 @@ function handleDeleteTodo(id) {
   console.log(todos_list)
 
   renderTodos(todos_list);
+  saveToLocalStorage(todos_list)
   
 }
 
